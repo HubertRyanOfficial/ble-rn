@@ -9,8 +9,8 @@ Before you start, make sure you have the following tools installed and configure
 1. **Node.js** (Recommended: LTS version)  
    Install Node.js from [https://nodejs.org/](https://nodejs.org/).
 
-2 **Android Studio** (for Android development)  
- Install Android Studio from [https://developer.android.com/studio](https://developer.android.com/studio).
+2. **Android Studio** (for Android development)  
+   Install Android Studio from [https://developer.android.com/studio](https://developer.android.com/studio).
 
 3. **A physical device** (Android or iOS)  
    Bluetooth functionality needs to be tested on a real device, as it is not supported in simulators/emulators.
@@ -22,7 +22,7 @@ Before you start, make sure you have the following tools installed and configure
 Clone the open-source React Native Bluetooth project to your local machine using Git:
 
 ```bash
-git clone https://github.com/your-repository-name/bluetooth-app.git
+git clone https://github.com/HubertRyanOfficial/ble-rn
 cd bluetooth-app
 ```
 
@@ -46,43 +46,9 @@ cd ..
 
 ---
 
-## Step 3: Configure Bluetooth Permissions
+## Step 3: Run the Application
 
-### iOS
-
-To enable Bluetooth on iOS, add the following keys to the `Info.plist` file located at `ios/YourAppName/Info.plist`.
-
-```xml
-<key>NSBluetoothAlwaysUsageDescription</key>
-<string>Your app needs Bluetooth access to discover and connect to devices.</string>
-<key>NSBluetoothPeripheralUsageDescription</key>
-<string>Your app needs Bluetooth access to connect to peripherals.</string>
-```
-
-### Android
-
-For Android, ensure the following permissions are added to the `android/app/src/main/AndroidManifest.xml`:
-
-```xml
-<uses-permission android:name="android.permission.BLUETOOTH" />
-<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-```
-
-Additionally, for Android 12 and above, include the following permissions in the `AndroidManifest.xml` under `<manifest>`:
-
-```xml
-<uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
-<uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-<uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
-```
-
----
-
-## Step 4: Run the Application
-
-### 4.1 Running on Android
+### 3.1 Running on Android
 
 Make sure you have an Android device connected via USB and USB debugging is enabled, or use a physical Android device with Bluetooth capabilities.
 
@@ -92,7 +58,7 @@ Run the following command to launch the app on your Android device:
 npx react-native run-android
 ```
 
-### 4.2 Running on iOS
+### 3.2 Running on iOS
 
 For iOS, you will need to have Xcode installed. To run the app on your iOS device or simulator:
 
@@ -104,7 +70,7 @@ Note: Bluetooth functionality must be tested on a physical device, as iOS simula
 
 ---
 
-## Step 5: Testing Bluetooth Functionality
+## Step 4: Testing Bluetooth Functionality
 
 After successfully running the app, the Bluetooth features should be fully functional.
 
